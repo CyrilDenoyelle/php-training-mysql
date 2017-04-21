@@ -32,3 +32,10 @@ CREATE TABLE IF NOT EXISTS `hiking` (
   `height_difference` int(6) NOT NULL COMMENT 'in m',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+INSERT INTO `hiking` (`name`,`difficulty`,`distance`,`duration`,`height_difference`)
+VALUES ('De Cilaos au cœur du Piton des Neiges par le Bassin Bleu et la Tête de Lion','très difficile',8.5,'08:30:00',1250),
+('De Cilaos au Maïdo par le Taïbit et les cascades de Bras Rouge et 3 Roches','très difficile',25.5,'09:30:00',2450),
+('De la route de Cilaos à l\'Ilet à Malheur','difficile',2.2,'02:30:00',380),
+('De Palmiste Rouge au sommet du Piton Gros Galet','difficile',7.5,'03:30:00',750),
+('Du Maïdo au Maïdo par l\'Îlet et le Rempart des Orangers','très difficile',13,'09:00:00',1200);
