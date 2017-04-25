@@ -6,25 +6,26 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<a href="/php-pdo/read.php">Liste des données</a>
+
+	<a href="/read.php">Liste des données</a>
 	<h1>Ajouter</h1>
-	<form action="" method="post">
+	<form action="reussite.php" method="POST">
 		<div>
 			<label for="name">Name</label>
-			<input type="text" name="name" value="">
+			<input type="text" name="name" value="TESTAGE">
 		</div>
 
 		<div>
 			<label for="difficulty">Difficulté</label>
 			<select name="difficulty">
-				<option value="très facile">Très facile</option>
+				<option value="tres facile">Très facile</option>
 				<option value="facile">Facile</option>
 				<option value="moyen">Moyen</option>
 				<option value="difficile">Difficile</option>
-				<option value="très difficile">Très difficile</option>
+				<option value="tres difficile">Très difficile</option>
 			</select>
 		</div>
-		
+
 		<div>
 			<label for="distance">Distance</label>
 			<input type="text" name="distance" value="">
@@ -37,7 +38,16 @@
 			<label for="height_difference">Dénivelé</label>
 			<input type="text" name="height_difference" value="">
 		</div>
-		<button type="submit" name="button">Envoyer</button>
+		<button type="submit" name="create" value="ok">Envoyer</button>
 	</form>
+
+	<?php 
+	try {
+		$bdh = new PDO('mysql:host=localhost;dbname=reunion_island','root','root');
+	} catch (PDOException $e) {
+		print "Erreur !:".$e->getMessage()."<br />";
+		die();
+	}
+	 ?>
 </body>
 </html>
