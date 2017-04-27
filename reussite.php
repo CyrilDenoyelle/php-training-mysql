@@ -15,13 +15,8 @@
 	}
 
 	// $bdh->exec("INSERT INTO hiking(name,difficulty,distance,duration,height_difference) VALUES('testage','difficile','123',123,123)");
-	?>
-	<pre>
-		<?php print_r($_POST); ?>
-	</pre>
-	<?php
+	
 	if(isset($_POST['update'])){
-		echo "coucou";
 		$name = utf8_decode($_POST['name']);
 		$difficulty = $_POST['difficulty'];
 		$distance = $_POST['distance'];
